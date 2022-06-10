@@ -1,0 +1,247 @@
+body {
+  background-image: url("../../assets/bg-1.jpg");
+  background-repeat: repeat-y;
+
+  background-size: cover;
+}
+
+.app__todo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.app__todo-sub-container {
+  position: relative;
+  margin: 120px;
+  width: 350px;
+  height: 190px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  transition: 0.9s ease all;
+}
+
+.app__todo-sub-container:hover {
+  height: 350px;
+}
+
+.check1:hover {
+  height: 32rem;
+  padding-bottom: 70px;
+}
+
+.app__items {
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  left: 30px;
+  top: 50px;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+.app__title {
+  font-size: 30px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.7s ease all;
+  transform: translate(200px, 20px);
+  overflow: hidden;
+}
+
+.app__todo-sub-container:hover .app__title {
+  opacity: 1;
+  transform: translate(0px, 20px);
+}
+
+.app__desc {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(88, 84, 84);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.7s ease all;
+  transform: translate(-200px, 0px);
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+}
+
+.app__todo-sub-container:hover .app__desc {
+  opacity: 1;
+  transform: translate(0px, 20px);
+}
+
+.app__date {
+  font-size: 16px;
+  font-weight: normal;
+  color: rgb(88, 84, 84);
+  display: flex;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.7s ease all;
+  transform: translate(200px, 0px);
+  overflow: hidden;
+}
+
+.app__todo-sub-container:hover .app__date {
+  opacity: 1;
+  transform: translate(0px, 20px);
+}
+
+.app__button {
+  display: flex;
+  margin: 30px 10px 10px 10px;
+  overflow: hidden;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.7s ease all;
+  transform: translate(0px, 200px);
+  overflow: hidden;
+}
+
+.app__todo-sub-container:hover .app__button {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+
+.app__char-box {
+  position: absolute;
+  left: 50%;
+  top: -30%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  transition: 0.5s ease all;
+  border-radius: 50%;
+}
+
+.app__title-char {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 73px;
+  color: #fff;
+  background-color: rgb(89, 89, 233);
+}
+
+.app__todo-sub-container:hover .app__char-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.check1:hover .app__char-box {
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+  transform: translate(-50%, 40%);
+}
+
+.btn-delete {
+  padding: 10px;
+  width: 90px;
+  margin: 10px;
+  border-radius: 4px;
+  transition: all 0.3 ease-out;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  outline: none;
+  border: 2px solid #ec4209;
+  position: relative;
+  z-index: 1;
+  color: rgb(70, 70, 74);
+  transition: 0.3s ease all;
+}
+
+.btn-delete:hover {
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  transform: scale(1.1)
+}
+
+.btn-delete::before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right: 50%;
+  bottom: 0;
+  opacity: 0;
+  content: "";
+  background-color: #ff0000;
+}
+.btn-delete:hover::before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-edit {
+  padding: 10px;
+  width: 90px;
+  margin: 10px;
+  border-radius: 4px;
+  transition: all 0.3 ease-out;
+  font-size: 1rem;
+  font-weight: 900;
+  font-family: "Courier New", Courier, monospace;
+  border: none;
+  outline: none;
+  border: 2px solid #125de8;
+  position: relative;
+  z-index: 1;
+  color: rgb(70, 70, 74);
+  transition: 0.3s ease all;
+}
+
+.btn-edit:hover {
+  color: rgb(10, 10, 10);
+  cursor: pointer;
+  transform: scale(1.1)
+
+}
+.btn-edit::before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color: #125de8;
+  }
+  .btn-edit:hover::before{
+      transition: 0.5s all ease;
+      left: 0;
+      right: 0;
+      opacity: 1;
+      z-index: -1;
+      margin: 0;
+      padding: 0;
+  }
