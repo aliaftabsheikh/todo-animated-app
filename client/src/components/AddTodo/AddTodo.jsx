@@ -19,7 +19,8 @@ const Navbar = () => {
  
 
   // const API_URL = "http://192.168.100.23:3000/posts/";
-  const API_URL = "http://localhost:3000/posts/";
+  const API_URL = "https://todoapp0123.herokuapp.com/posts/";
+  // const API_URL = "http://localhost:3000/posts/";
 
   const submitForm = async (e) => {
     e.preventDefault();
